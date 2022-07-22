@@ -3,8 +3,8 @@ package builder
 import (
 	"bufio"
 	"fmt"
+	"github.com/A-ndrey/gonew/file/license"
 	"github.com/A-ndrey/gonew/git"
-	"github.com/A-ndrey/gonew/license"
 	"os"
 	"os/exec"
 	"regexp"

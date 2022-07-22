@@ -2,8 +2,8 @@ package builder
 
 import (
 	"github.com/A-ndrey/gonew/file"
+	"github.com/A-ndrey/gonew/file/license"
 	git2 "github.com/A-ndrey/gonew/git"
-	"github.com/A-ndrey/gonew/license"
 	"os"
 	"time"
 )
