@@ -1,9 +1,9 @@
 package builder
 
 import (
-	"github.com/A-ndrey/gonew/internal/file"
-	"github.com/A-ndrey/gonew/internal/git"
-	"github.com/A-ndrey/gonew/internal/license"
+	"github.com/A-ndrey/gonew/file"
+	git2 "github.com/A-ndrey/gonew/git"
+	"github.com/A-ndrey/gonew/license"
 	"os"
 	"time"
 )
@@ -46,7 +46,7 @@ func (b *Builder) Build() error {
 func (b *Builder) gitCloneOrCreateDir() error {
 	var err error
 	if b.gitLink != "" {
-		err = git.Clone(b.gitLink)
+		err = git2.Clone(b.gitLink)
 	} else {
 		err = os.Mkdir(b.projectName, os.ModePerm)
 	}
@@ -119,7 +119,7 @@ func (b *Builder) addGitignoreFile() error {
 	}
 
 	const fileName = ".gitignore"
-	content, err := git.DownloadGitignore(b.gitignore)
+	content, err := git2.DownloadGitignore(b.gitignore)
 	if err != nil {
 		return err
 	}

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/A-ndrey/gonew/internal/builder"
+	"github.com/A-ndrey/gonew/builder"
 	"log"
 )
 
